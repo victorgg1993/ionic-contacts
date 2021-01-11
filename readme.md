@@ -35,9 +35,10 @@ El formulario quedará así:
 
 ## Funcionalidad
 
-1. La lista de contactos se carga al iniciar la aplicación y se vuelve a ella desde los botones _cancel_ y _done_ del formulario.
-2. EL botón `done` guarda los datos y vuelve al fomulario.
-3. La cámara toma fotos y las fotografías se almacenan junto con los nuevos contactos en el storage del dispositivo. 
+1. La lista de contactos se carga al iniciar la aplicación con todos los contactos iniciales más los almacenados en el storage.
+2. A la lista se vuelve a ella desde los botones _cancel_ y _done_ del formulario.
+3. EL botón `done` guarda los datos y carga la lista con los nuevos contactos incorporados.
+4. La cámara toma fotos y las fotografías se almacenan junto con los nuevos contactos en el storage del dispositivo. 
 
 ## Requerimientos técnicos
 
