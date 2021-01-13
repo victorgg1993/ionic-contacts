@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancelar()">Cancel</ion-button>
+    </ion-buttons>
+
+    <ion-title>New Contact</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button
+        (click)="done()"
+        [disabled]="
+      dada_usuari.nom==='' ||
+      dada_usuari.cognom==='' ||
+      dada_usuari.email==='' ||
+      dada_usuari.telefon===''
+      "
+        >Done</ion-button
+      >
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--  -->
+
+  <form>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-align-self-start"> </ion-col>
+
+        <ion-col class="ion-align-self-center">
+          <ion-thumbnail>
+            <ion-img src="{{imatge_avatar}}"></ion-img>
+          </ion-thumbnail>
+        </ion-col>
+
+        <ion-col class="ion-align-self-end"> </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="ion-align-self-start"> </ion-col>
+
+        <ion-col class="ion-align-self-center">
+          <ion-buttons>
+            <ion-button (click)="addPhotoToGallery()">Add photo</ion-button>
+          </ion-buttons>
+        </ion-col>
+
+        <ion-col class="ion-align-self-end"> </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-input
+          type="text"
+          placeholder="First name"
+          [(ngModel)]="dada_usuari.nom"
+          name="input_nom"
+        ></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <ion-input
+          type="text"
+          placeholder="Last name"
+          [(ngModel)]="dada_usuari.cognom"
+          name="input_primer_cognom"
+        ></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <ion-input
+          type="email"
+          placeholder="Email name"
+          [(ngModel)]="dada_usuari.email"
+          name="input_email"
+        ></ion-input>
+      </ion-row>
+
+      <ion-row>
+        <ion-input
+          type="tel"
+          placeholder="Phone name"
+          [(ngModel)]="dada_usuari.telefon"
+          name="input_telefon"
+        ></ion-input>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+  <!--  -->
+</ion-content>

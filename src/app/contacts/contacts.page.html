@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contacts</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="afegir_usuari()">+</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--  -->
+  <ion-list>
+    <ion-item
+      button
+      (click)="usuari_click($event)"
+      *ngFor="let persona of usuaris"
+    >
+      <ion-thumbnail slot="start">
+        <ion-img [src]="persona.image"></ion-img>
+      </ion-thumbnail>
+
+      <ion-label>{{persona.firstName}}  {{persona.lastName}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <!--  -->
+</ion-content>
